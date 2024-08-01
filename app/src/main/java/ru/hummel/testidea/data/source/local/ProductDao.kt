@@ -24,13 +24,10 @@ interface ProductDao {
   suspend fun count(): Int
 
   @Insert(onConflict = OnConflictStrategy.REPLACE)
-  suspend fun insert(post: ProductEntity)
-
-  @Insert(onConflict = OnConflictStrategy.REPLACE)
-  suspend fun insert(posts: List<ProductEntity>)
+  suspend fun insert(product: ProductEntity)
 
   @Query("DELETE FROM ProductEntity WHERE id = :id")
-  suspend fun removeById(id: Long)
+  suspend fun removeById(id: Int)
 
   @Query("DELETE FROM ProductEntity")
   suspend fun removeAll()

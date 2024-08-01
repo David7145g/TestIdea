@@ -15,8 +15,8 @@ import androidx.navigation.compose.rememberNavController
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.launch
-import ru.hummel.presentation.snackbar.SnackbarManager
-import ru.hummel.presentation.snackbar.SnackbarMessage.Companion.toMessage
+import ru.hummel.testidea.presentation.ui.snackbar.SnackbarManager
+import ru.hummel.testidea.presentation.ui.snackbar.SnackbarMessage.Companion.toMessage
 
 
 @Stable

@@ -2,7 +2,6 @@ package ru.hummel.testidea.di
 
 import android.content.Context
 import androidx.room.Room
-import ru.hummel.testidea.data.FakeApiService
 import ru.hummel.testidea.data.ProductsRepository
 import ru.hummel.testidea.data.ProductsRepositoryImpl
 import ru.hummel.testidea.data.source.local.AppDb
@@ -17,10 +16,7 @@ fun AppModule(appContext: Context): AppModule {
   return object : AppModule {
     override val productsRepository: ProductsRepository by lazy {
       ProductsRepositoryImpl(
-        apiService = FakeApiService(appContext),
         productDao = appDb.productDao(),
-        appDb = appDb,
-        productRemoteKeyDao = appDb.productRemoteKeyDao()
       )
     }
     override val appDb: AppDb by lazy {

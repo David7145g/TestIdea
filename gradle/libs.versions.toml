@@ -3,7 +3,7 @@
 androidKtx = "1.6.1"
 
 activityCompose = "1.9.1"
-composeBom = "2024.04.01"
+composeBom = "2024.06.00"
 navigationCompose = "2.7.7"
 
 appcompat = "1.6.1"
@@ -37,8 +37,8 @@ room = "2.6.0"
 okHttp = "4.11.0"
 retrofit = "2.9.0"
 ktor = "2.3.6"
-firebaseAuth = "22.3.0"
 
+threetenabp = "1.4.6"
 tinkoff = "2.7.0"
 
 androidTest-espresso = "3.5.1"
@@ -52,6 +52,7 @@ coroutines-core = "1.6.4"
 junitKtx = "1.1.5"
 runner = "1.5.2"
 paging = "3.3.1"
+uiTooling = "1.6.8"
 
 [libraries]
 #[androidx-ktx]
@@ -82,8 +83,8 @@ androidx-datastore = { group = "androidx.datastore", name = "datastore-preferenc
 androidx-paging-common-android = { group = "androidx.paging", name = "paging-common-android", version.ref = "paging" }
 androidx-paging-compose = { group = "androidx.paging", name = "paging-compose", version.ref = "paging" }
 
-
 #[room]
+room-paging = { group = "androidx.room", name = "room-paging", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" } #ksp
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
@@ -92,7 +93,7 @@ room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 androidx-lifecycle-runtime = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycleVersion" }
 androidx-lifecycle-livedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleVersion" }
 androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleVersion" }
-androidx-lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version = "2.2.0" }
+androidx-lifecycle-extensions = { group = "androidx.lifecycle", name = "lifecycle-extensions", version = "lifecycleVersion" }
 
 #[androidx-navigation]
 androidx-navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
@@ -151,6 +152,9 @@ github-segmentedButton = { group = "com.github.addisonelliott", name = "Segmente
 github-viewbindingPropertyDelegate = { group = "com.github.kirich1409", name = "viewbindingpropertydelegate", version = "1.5.6" }
 github-glide = { group = "com.github.bumptech.glide", name = "glide", version = "4.14.2" }
 
+#[low api version support]
+threetenabp = { module = "com.jakewharton.threetenabp:threetenabp", version.ref = "threetenabp" }
+
 #[other custom shit]
 android-widget = { group = "me.dm7.android.widget", name = "android.widget", version = "1.0" }
 
@@ -165,10 +169,12 @@ ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serializatio
 ##[debug]
 junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.ref = "junitKtx" }
 runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "uiTooling" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android-application" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }

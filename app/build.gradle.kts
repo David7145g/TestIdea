@@ -2,6 +2,7 @@ plugins {
   alias(libs.plugins.android.application)
   alias(libs.plugins.kotlin.android)
   alias(libs.plugins.ksp)
+  alias(libs.plugins.compose.compiler)
 }
 
 android {
@@ -37,9 +38,6 @@ android {
   buildFeatures {
     compose = true
   }
-  composeOptions {
-    kotlinCompilerExtensionVersion = "1.5.6"
-  }
   packaging {
     resources {
       excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -51,7 +49,8 @@ dependencies {
 
   implementation(libs.room.runtime)
   implementation(libs.room.ktx)
-  implementation(libs.androidx.paging.common.android)
+  implementation(libs.room.paging)
+  implementation(libs.threetenabp)
   implementation(libs.androidx.paging.compose)
   ksp(libs.room.compiler)
 
@@ -64,4 +63,5 @@ dependencies {
   implementation(libs.androidx.ui.graphics)
   implementation(libs.androidx.ui.tooling.preview)
   implementation(libs.androidx.material3)
+  debugImplementation(libs.ui.tooling)
 }

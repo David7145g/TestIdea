@@ -1,8 +1,8 @@
-package ru.hummel.presentation.snackbar
+package ru.hummel.testidea.presentation.ui.snackbar
 
 import android.content.res.Resources
 import androidx.annotation.StringRes
-import ru.hummel.presentation.R.string as AppText
+import ru.hummel.testidea.R.string as AppText
 
 sealed class SnackbarMessage {
 

@@ -3,11 +3,11 @@ package ru.hummel.testidea.presentation.ui
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import ru.hummel.presentation.snackbar.SnackbarManager
+import ru.hummel.testidea.presentation.ui.snackbar.SnackbarManager
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import ru.hummel.presentation.snackbar.SnackbarMessage.Companion.toSnackbarMessage
+import ru.hummel.testidea.presentation.ui.snackbar.SnackbarMessage.Companion.toSnackbarMessage
 
 open class BaseViewModel : ViewModel() {
 
